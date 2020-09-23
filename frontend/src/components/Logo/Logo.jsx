@@ -4,4 +4,4 @@ import logo from "./logo1.png";
 
 import React from "react";
 
-export default (props) => <img src={logo} alt="logo" width="180" height="60" />;
+export default (props) => <img src={logo} alt="logo" width="250" height="60" />;

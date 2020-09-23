@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap");
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+li {
+  list-style-type: square;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.footer {
+  background: rgb(65, 69, 106);
+  background: linear-gradient(
+    180deg,
+    rgba(65, 69, 106, 1) 0%,
+    rgba(56, 60, 94, 1) 27%,
+    rgba(43, 45, 66, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-side {
+  margin-right: 10vh;
+}
