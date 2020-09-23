@@ -1,14 +1,8 @@
 import React from "react";
-import Logo from "../components/Logo/Logo";
-import Nav from "../components/Nav/Nav";
-import Main from "../components/Main/Main";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 export default (props) => (
   <div className="app">
-    <Logo />
-    <Nav />
-    <Main />
-    <Footer />
+    <Header />
   </div>
 );

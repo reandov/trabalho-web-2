@@ -1,4 +1,11 @@
-import "./Header.css";
 import React from "react";
 
-export default (props) => <header className="header">Header</header>;
+import "./Header.css";
+
+import Logo from "../Logo/Logo";
+
+export default (props) => (
+  <header className="header">
+    <Logo />
+  </header>
+);

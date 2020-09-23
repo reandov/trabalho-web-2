@@ -1,0 +1,16 @@
+.header {
+  background: rgb(4, 146, 154);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 146, 154, 1) 0%,
+    rgba(0, 191, 170, 1) 50%,
+    rgba(3, 181, 170, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 10px #27272756;
+  -webkit-box-shadow: 0px 2px 10px #27272756;
+  -moz-box-shadow: 0px 2px 10px #27272756;
+  position: relative;
+  z-index: 999999;
+}
