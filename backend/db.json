@@ -1,26 +1,48 @@
 {
   "eventos": [
     {
-      "id": 1,
-      "titulo": "Exposição React",
-      "descricao": "Lorem",
+      "titulo": "Introdução à Data Science",
+      "descricao": "Introdução à área de Data Science no Campus de Russas.",
       "data": [
         {
-          "inicio": "2020-09-22",
-          "fim": "2020-09-25"
+          "inicio": "2020-10-01",
+          "fim": "2020-10-01"
         }
-      ]
+      ],
+      "id": 1
     },
     {
-      "id": 2,
-      "titulo": "Exposição Data Science",
-      "descricao": "Ipsum",
+      "titulo": "Computer Vision and the Modern Era",
+      "descricao": "Uma visão moderna sobre os usos da Visão Computacional.",
       "data": [
         {
-          "inicio": "2020-09-22",
-          "fim": "2020-09-25"
+          "inicio": "2020-10-02",
+          "fim": "2020-10-02"
         }
-      ]
+      ],
+      "id": 2
+    },
+    {
+      "titulo": "Sprint: Utilizar ou não?",
+      "descricao": "Nessa palestra-discussão teremos como tema a possibilidade (ou não) da adoção do método agil Sprint.",
+      "data": [
+        {
+          "inicio": "2020-10-03",
+          "fim": "2020-10-03"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "titulo": "Deep Learning against lies",
+      "descricao": "Nessa oficina, implementaremos uma rede neural capaz de classificar notícias como fake news ou não.",
+      "data": [
+        {
+          "inicio": "2020-10-04",
+          "fim": "2020-10-04"
+        }
+      ],
+      "id": 4
     }
   ]
 }
