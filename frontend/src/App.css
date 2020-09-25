@@ -3,6 +3,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -11,17 +12,13 @@ body,
   height: 100%;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
 main {
   flex: 1;
 }
 
 main ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   list-style: none;
 }
@@ -33,5 +30,11 @@ main ul {
 }
 
 .card-holder {
+  margin: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: baseline;
   margin: 30px;
 }
