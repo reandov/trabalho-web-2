@@ -13,7 +13,11 @@ body,
 }
 
 main {
-  flex: 1;
+  display: flex;
+  margin-top: 2%;
+  justify-content: baseline;
+  flex-direction: column-reverse;
+  margin: 30px;
 }
 
 main ul {
@@ -33,8 +37,13 @@ main ul {
   margin: 30px;
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: baseline;
   margin: 30px;
+} */
+
+aside {
+  padding-left: 30%;
+  padding-right: 30%;
 }

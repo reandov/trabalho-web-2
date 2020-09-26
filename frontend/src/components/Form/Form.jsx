@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form({ onSubmit }) {
+  const [evento_id, setEventoID] = useState("");
   const [evento_titulo, setEventoTitulo] = useState("");
   const [evento_descricao, setEventoDescricao] = useState("");
   const [evento_dinicio, setEventoDInicio] = useState("");
@@ -12,6 +13,7 @@ function Form({ onSubmit }) {
     e.preventDefault();
 
     await onSubmit({
+      id: evento_id,
       titulo: evento_titulo,
       descricao: evento_descricao,
       data: [
@@ -22,6 +24,7 @@ function Form({ onSubmit }) {
       ],
     });
 
+    setEventoID("");
     setEventoTitulo("");
     setEventoDescricao("");
     setEventoDInicio("");
@@ -30,6 +33,18 @@ function Form({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="input-block">
+        <label htmlFor="evento_id">
+          ID do Evento <strong>(em caso de Alteração)</strong>
+        </label>
+        <input
+          type="number"
+          name="evento_id"
+          id="evento_id"
+          value={evento_id}
+          onChange={(e) => setEventoID(e.target.value)}
+        />
+      </div>
       <div className="input-block">
         <label htmlFor="evento_titulo">Título do Evento</label>
         <input
@@ -62,8 +77,6 @@ function Form({ onSubmit }) {
             onChange={(e) => setEventoDInicio(e.target.value)}
           />
         </div>
-      </div>
-      <div className="input-group">
         <div className="input-block">
           <label htmlFor="evento_dfim">Data de Encerramento</label>
           <input

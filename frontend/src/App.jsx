@@ -23,8 +23,20 @@ function App() {
   }, []);
 
   async function handleAddEvento(data) {
-    const response = await api.post("./eventos", data);
-    setEventos([...eventos, response.data]);
+    if (data.id === "") {
+      const response = await api.post("/eventos", data);
+      setEventos([...eventos, response.data]);
+    } else {
+      let response = await api.put(`/eventos/${data.id}`, data);
+      response = await api.get("/eventos");
+      setEventos(response.data);
+    }
+  }
+
+  async function handleDestroyEvento(id) {
+    let response = await api.delete(`/eventos/${id}`);
+    response = await api.get("/eventos");
+    setEventos(response.data);
   }
 
   return (
@@ -35,7 +47,11 @@ function App() {
           <h1>Lista de Eventos</h1>
           <ul className="card-holder">
             {eventos.map((evento) => (
-              <Card key={evento._id} evento={evento} />
+              <Card
+                key={evento.id}
+                evento={evento}
+                handleDestroyEvento={handleDestroyEvento}
+              />
             ))}
           </ul>
         </div>
