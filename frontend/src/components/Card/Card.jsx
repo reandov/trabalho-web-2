@@ -21,9 +21,9 @@ function Card({ evento, handleDestroyEvento }) {
           <span>{evento.descricao}</span>
         </div>
       </header>
-      <button onClick={handleDelete} className="delete-buttom">
-        Delete
-      </button>
+      <div className="button-options">
+        <button onClick={handleDelete}>Excluir</button>
+      </div>
     </li>
   );
 }

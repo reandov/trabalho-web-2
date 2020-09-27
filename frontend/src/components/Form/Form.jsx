@@ -3,94 +3,101 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form({ onSubmit }) {
-  const [evento_id, setEventoID] = useState("");
-  const [evento_titulo, setEventoTitulo] = useState("");
-  const [evento_descricao, setEventoDescricao] = useState("");
-  const [evento_dinicio, setEventoDInicio] = useState("");
-  const [evento_dfim, setEventoDFim] = useState("");
+  const [id, setID] = useState("");
+  const [titulo, setTitulo] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [inicio, setInicio] = useState("");
+  const [fim, setFim] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     await onSubmit({
-      id: evento_id,
-      titulo: evento_titulo,
-      descricao: evento_descricao,
+      id,
+      titulo,
+      descricao,
       data: [
         {
-          inicio: evento_dinicio,
-          fim: evento_dfim,
+          inicio,
+          fim,
         },
       ],
     });
 
-    setEventoID("");
-    setEventoTitulo("");
-    setEventoDescricao("");
-    setEventoDInicio("");
-    setEventoDFim("");
+    setID("");
+    setTitulo("");
+    setDescricao("");
+    setInicio("");
+    setFim("");
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input-block">
-        <label htmlFor="evento_id">
-          ID do Evento <strong>(em caso de Alteração)</strong>
-        </label>
-        <input
-          type="number"
-          name="evento_id"
-          id="evento_id"
-          value={evento_id}
-          onChange={(e) => setEventoID(e.target.value)}
-        />
-      </div>
-      <div className="input-block">
-        <label htmlFor="evento_titulo">Título do Evento</label>
-        <input
-          name="evento_titulo"
-          id="evento_titulo"
-          required
-          value={evento_titulo}
-          onChange={(e) => setEventoTitulo(e.target.value)}
-        />
-      </div>
-      <div className="input-block">
-        <label htmlFor="evento_descricao">Descrição do Evento</label>
-        <input
-          name="evento_descricao"
-          id="evento_descricao"
-          required
-          value={evento_descricao}
-          onChange={(e) => setEventoDescricao(e.target.value)}
-        />
-      </div>
-      <div className="input-group">
+    <div className="form-component">
+      <h1>Criar Evento</h1>
+      <form onSubmit={handleSubmit}>
         <div className="input-block">
-          <label htmlFor="evento_dinicio">Data de Inicio</label>
+          <label htmlFor="id">
+            ID do Evento <strong>(em caso de Alteração)</strong>
+          </label>
           <input
-            type="date"
-            name="evento_dinicio"
-            id="evento_dinicio"
-            required
-            value={evento_dinicio}
-            onChange={(e) => setEventoDInicio(e.target.value)}
+            type="number"
+            name="id"
+            id="id"
+            value={id}
+            onChange={(e) => setID(e.target.value)}
           />
         </div>
         <div className="input-block">
-          <label htmlFor="evento_dfim">Data de Encerramento</label>
+          <label htmlFor="titulo">Título do Evento</label>
           <input
-            type="date"
-            name="evento_dfim"
-            id="evento_dfim"
+            type="text"
+            name="titulo"
+            id="titulo"
             required
-            value={evento_dfim}
-            onChange={(e) => setEventoDFim(e.target.value)}
+            value={titulo}
+            maxLength="32"
+            onChange={(e) => setTitulo(e.target.value)}
           />
         </div>
-      </div>
-      <button type="submit">Criar Evento</button>
-    </form>
+        <div className="input-block">
+          <label htmlFor="descricao">Descrição do Evento</label>
+          <input
+            type="text"
+            name="descricao"
+            id="descricao"
+            required
+            value={descricao}
+            maxLength="128"
+            onChange={(e) => setDescricao(e.target.value)}
+          />
+        </div>
+        <div className="input-group">
+          <div className="input-block">
+            <label htmlFor="inicio">Data de Inicio</label>
+            <input
+              type="date"
+              name="dinicio"
+              id="dinicio"
+              required
+              value={inicio}
+              onChange={(e) => setInicio(e.target.value)}
+            />
+          </div>
+          <div className="input-block">
+            <label htmlFor="fim">Data de Encerramento</label>
+            <input
+              type="date"
+              name="dfim"
+              id="dfim"
+              required
+              value={fim}
+              onChange={(e) => setFim(e.target.value)}
+            />
+          </div>
+        </div>
+        <button type="submit">Criar Evento</button>
+      </form>
+    </div>
   );
 }
 

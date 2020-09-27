@@ -6,44 +6,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html,
-body,
-#root {
-  height: 100%;
+.page-container {
+  background-color: rgb(241, 241, 241);
+  position: relative;
+  min-height: 100vh;
 }
 
-main {
-  display: flex;
-  margin-top: 2%;
-  justify-content: baseline;
-  flex-direction: column-reverse;
-  margin: 30px;
-}
-
-main ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  list-style: none;
-}
-
-@media (max-width: 650px) {
-  main ul {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card-holder {
-  margin: 30px;
-}
-
-/* .container {
-  display: flex;
-  justify-content: baseline;
-  margin: 30px;
-} */
-
-aside {
-  padding-left: 30%;
-  padding-right: 30%;
+.content-wrap {
+  padding-bottom: 2.5rem;
 }

@@ -6,7 +6,7 @@ import api from "./services/api";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Card from "./components/Card/Card";
+import CardList from "./components/Card-List/Card-List";
 import Form from "./components/Form/Form";
 
 function App() {
@@ -33,34 +33,14 @@ function App() {
     }
   }
 
-  async function handleDestroyEvento(id) {
-    let response = await api.delete(`/eventos/${id}`);
-    response = await api.get("/eventos");
-    setEventos(response.data);
-  }
-
   return (
-    <div className="app">
-      <Header />
-      <main className="container">
-        <div>
-          <h1>Lista de Eventos</h1>
-          <ul className="card-holder">
-            {eventos.map((evento) => (
-              <Card
-                key={evento.id}
-                evento={evento}
-                handleDestroyEvento={handleDestroyEvento}
-              />
-            ))}
-          </ul>
-        </div>
-        <aside>
-          <h1>Criar Evento</h1>
-          <Form onSubmit={handleAddEvento} />
-        </aside>
-      </main>
-      <Footer />
+    <div className="page-container">
+      <div className="content-wrap">
+        <Header />
+        <Form onSubmit={handleAddEvento} />
+        <CardList eventos={eventos} api={api} setEventos={setEventos} />
+        <Footer />
+      </div>
     </div>
   );
 }
