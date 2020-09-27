@@ -55,7 +55,7 @@ function Form({ onSubmit }) {
             id="titulo"
             required
             value={titulo}
-            maxlength="32"
+            maxLength="32"
             onChange={(e) => setTitulo(e.target.value)}
           />
         </div>
@@ -67,7 +67,7 @@ function Form({ onSubmit }) {
             id="descricao"
             required
             value={descricao}
-            maxlength="128"
+            maxLength="128"
             onChange={(e) => setDescricao(e.target.value)}
           />
         </div>

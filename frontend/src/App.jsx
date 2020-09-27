@@ -34,11 +34,13 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <Header />
-      <Form onSubmit={handleAddEvento} />
-      <CardList eventos={eventos} api={api} setEventos={setEventos} />
-      <Footer />
+    <div className="page-container">
+      <div className="content-wrap">
+        <Header />
+        <Form onSubmit={handleAddEvento} />
+        <CardList eventos={eventos} api={api} setEventos={setEventos} />
+        <Footer />
+      </div>
     </div>
   );
 }

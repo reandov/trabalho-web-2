@@ -4,8 +4,8 @@ li {
 
 li.event-item {
   background: rgb(228, 228, 228);
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-  border-radius: 2px;
+  box-shadow: 0px 1px 2px #27272756;
+  border-radius: 4px;
   padding: 20px;
 }
 
@@ -16,13 +16,12 @@ li.event-item header {
 }
 
 li.event-item header img {
-  width: 72px;
-  height: 90px;
-  /* border-radius: 50%; */
+  width: 120px;
+  height: 138px;
 }
 
 li.event-item header .event-info {
-  margin-left: 10px;
+  margin-left: 40px;
 }
 
 .event-info strong {
@@ -53,4 +52,24 @@ li.event-item a {
 
 li.event-item a:hover {
   color: #5a2ea6;
+}
+
+.button-options {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-left: 5px; */
+}
+
+li button {
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0px 1px 2px #27272756;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li button:hover {
+  background-color: rgb(184, 45, 45);
+  color: white;
 }

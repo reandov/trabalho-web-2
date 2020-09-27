@@ -2,23 +2,45 @@
   "eventos": [
     {
       "id": 1,
-      "titulo": "ASBEJHEASBJHSEJ",
-      "descricao": "SDASHBFAJHSFBAS",
+      "titulo": "Introduction to Deep Learning",
+      "descricao": "In this meeting we're going to take a introductory course on Deep Learning",
       "data": [
         {
-          "inicio": "2020-09-10",
-          "fim": "2020-09-10"
+          "inicio": "2020-10-01",
+          "fim": "2020-10-01"
         }
       ]
     },
     {
       "id": 2,
-      "titulo": "Teste1",
-      "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate laborum, dolorem enim reiciendis animi qui id numquam nam, ",
+      "titulo": "Data Science with COVID-19",
+      "descricao": "In this workshop you're going to learn how to use Data Science tools to study COVID-19 data from your country!",
       "data": [
         {
-          "inicio": "2020-09-10",
-          "fim": "2020-09-10"
+          "inicio": "2020-10-02",
+          "fim": "2020-10-02"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "SCRUM: When to use",
+      "descricao": "It's all about quick software development isn't?",
+      "data": [
+        {
+          "inicio": "2020-10-03",
+          "fim": "2020-10-03"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "A Step Closer to Proof P=NP",
+      "descricao": "A brief introduction to Computational Problems",
+      "data": [
+        {
+          "inicio": "2020-10-04",
+          "fim": "2020-10-04"
         }
       ]
     }

@@ -14,6 +14,9 @@ li a {
 }
 
 .footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   background: rgb(65, 69, 106);
   background: linear-gradient(
     180deg,
@@ -21,16 +24,14 @@ li a {
     rgba(56, 60, 94, 1) 27%,
     rgba(43, 45, 66, 1) 100%
   );
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
   font-family: "Source Code Pro", monospace;
   color: white;
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 10px;
 }
 
 .left-side {

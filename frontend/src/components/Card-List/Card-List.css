@@ -2,6 +2,7 @@
   padding: 50px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 8vh;
 }
 
 .card-list ul {
@@ -15,4 +16,15 @@
   .card-list ul {
     grid-template-columns: 1fr;
   }
+}
+
+.list-header {
+  display: flex;
+}
+
+.list-header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
 }
